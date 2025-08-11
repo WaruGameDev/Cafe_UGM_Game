@@ -24,6 +24,8 @@ public class Client : MonoBehaviour
     public ClientClass client;
     private NavMeshAgent navMeshAgent;
     public Transform target;
+
+    public FoodSO pedido;
    
     void Start()
     {
