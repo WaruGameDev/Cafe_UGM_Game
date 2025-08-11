@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOccupied: 0
-  chair: {fileID: 0}
+  chair: {fileID: 1386088773}
 --- !u!4 &53512557
 Transform:
   m_ObjectHideFlags: 0
@@ -1455,6 +1455,7 @@ MonoBehaviour:
   client:
     nameClient: 
     clientState: 0
+  navMeshAgent: {fileID: 0}
   target: {fileID: 0}
   pedido: {fileID: 0}
 --- !u!65 &1702259513
