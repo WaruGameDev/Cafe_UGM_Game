@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4318316cb6a684994671f52ec78295, type: 3}
   m_Name: Apple
   m_EditorClassIdentifier: 
-  foodName: 
-  cost: 0
-  sell: 0
-  model: {fileID: 0}
-  icon: {fileID: 0}
+  foodName: Apple
+  cost: 10
+  sell: 15
+  model: {fileID: 919132149155446097, guid: 20384f5105883584bbd3adb45e1165c7, type: 3}
+  icon: {fileID: 21300000, guid: 4bb41680abba73540b14e6c845b9df3c, type: 3}

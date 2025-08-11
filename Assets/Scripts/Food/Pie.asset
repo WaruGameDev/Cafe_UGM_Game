@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4318316cb6a684994671f52ec78295, type: 3}
   m_Name: Pie
   m_EditorClassIdentifier: 
-  foodName: 
-  cost: 0
-  sell: 0
-  model: {fileID: 0}
-  icon: {fileID: 0}
+  foodName: Pie
+  cost: 100
+  sell: 150
+  model: {fileID: 919132149155446097, guid: 7939aa628b451a34884f5f65bd5c8b90, type: 3}
+  icon: {fileID: 21300000, guid: c04f040d871bcac40b8f06c857a6858f, type: 3}
