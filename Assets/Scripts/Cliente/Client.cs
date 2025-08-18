@@ -25,20 +25,22 @@ public class Client : MonoBehaviour
     public NavMeshAgent navMeshAgent;
     public Transform target;
 
-    public FoodSO pedido;
-
-    void Start()
-    {
-        navMeshAgent = GetComponent<NavMeshAgent>();
-    }
+    public FoodSO pedido;    
 
     public void ChooseTable(Transform chairChosen)
     {
-        target = chairChosen;
-        client.clientState = ClientStates.GOING_TO_TABLE;
-        navMeshAgent.SetDestination(target.position);
+        if (chairChosen != null)
+        {
+            target = chairChosen;
+            client.clientState = ClientStates.GOING_TO_TABLE;
+            navMeshAgent.SetDestination(target.position);
+        }
+        else
+        {
+            // logica de esperar turno
+        }
     }
 
-    // Update is called once per frame
+   
 
 }
