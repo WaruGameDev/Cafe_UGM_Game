@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
     public List<Table> tables;
     public List<Client> clients;
 
@@ -10,8 +11,10 @@ public class GameManager : MonoBehaviour
     public GameObject clientObject;
     public Transform spawnPoint;
 
-
-
+    private void Awake()
+    {
+        Instance = this;
+    }
     public Client CreateClient()
     {
         Client clt = Instantiate(clientObject, spawnPoint.position, Quaternion.identity).GetComponent<Client>();
@@ -36,7 +39,7 @@ public class GameManager : MonoBehaviour
 
     public void SetTableForClient(Client client)
     {
-        client.ChooseTable(GetFreeTable().chair);
+        client.ChooseTable(GetFreeTable());
     }
 
     public void Update()
