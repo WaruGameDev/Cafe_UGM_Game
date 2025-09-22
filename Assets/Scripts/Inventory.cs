@@ -6,20 +6,27 @@ public class Inventory : MonoBehaviour
     public Dictionary<string, int> inventory = new Dictionary<string, int>();
     public List<FoodSO> foodSOs = new List<FoodSO>();
 
+    
+
 
 
     public Transform scrollInventory;
     public GameObject panelProduct;
+    public static Inventory Instance;
+    
+    void Awake()
+    {
+        Instance = this;
+    }
 
     public FoodSO GetFoodSO(string foodName)
     {
         foreach (var food in foodSOs)
         {
-            if(food.foodName == foodName) return food;
+            if (food.foodName == foodName) return food;
         }
         return null;
     }
-
 
     public void AddObject(string itemName, int count)
     {
