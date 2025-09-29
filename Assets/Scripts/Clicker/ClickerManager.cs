@@ -1,13 +1,15 @@
+using System.Security.AccessControl;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement; 
+using UnityEngine.SceneManagement;
+
 
 public class ClickerManager : MonoBehaviour
 {
     public static ClickerManager Instance;
     public TextMeshProUGUI pointsText;
     public TextMeshProUGUI minionsText;
-
+    public System.Action onPointsChanged;
     void Awake()
     {
         Instance = this;
@@ -21,6 +23,7 @@ public class ClickerManager : MonoBehaviour
     {
         ClickerDataManager.points += pointsToAdd;
         RefreshIU();
+        onPointsChanged?.Invoke();
     }
     public void AddMinions(int minionsToAdd)
     {
